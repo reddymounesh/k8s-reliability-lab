@@ -65,3 +65,15 @@ determines the correct fix: memory issues need higher limits or leak fixes; CPU
 throttling may be acceptable if latency SLOs are still met.
 
 ## Repository Structure
+
+k8s-lab/
+├── app/                  # Flask API source + Dockerfile
+├── manifests/            # All Kubernetes YAML objects
+├── monitoring/           # ServiceMonitor + Helm values
+├── scripts/              # Load generator + validation scripts
+└── docs/
+├── evidence/         # Raw test output from all 5 experiments
+├── screenshots/      # Grafana dashboard proof
+├── observations/     # Written analysis per experiment
+└── postmortems/      # Blameless post-mortem for OOMKill incident
+

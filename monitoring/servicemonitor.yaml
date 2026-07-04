@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: taskapi-monitor
+  namespace: monitoring
+  labels:
+    release: monitoring
+
+spec:
+  namespaceSelector:
+    matchNames:
+      - task-app
+  selector:
+    matchLabels:
+      app: taskapi
+
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+
+      

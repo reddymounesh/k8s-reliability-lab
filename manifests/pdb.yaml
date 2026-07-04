@@ -1,0 +1,26 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: taskapi-pdb
+  namespace: task-app
+
+spec:
+  minAvailable: 2
+
+
+  selector:
+    matchLabels:
+      app: taskapi
+
+    # IMPORTANT: PDB only affects VOLUNTARY disruptions
+    # - kubectl drain (node maintance)
+    # - rolling updates
+    # - cluster autoscaler scale-down
+
+    #
+    #PDB does not protect against:
+    # - Node failure (invlountary)
+    # - OOMKill (kernel action)
+    # - Liveness probe failure
+
+    # this bypass PDB completely 

@@ -1,0 +1,9 @@
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   66d   v1.35.1
+NAME                       READY   STATUS    RESTARTS       AGE     IP             NODE       NOMINATED NODE   READINESS GATES
+taskapi-544bbf8675-rxs6l   1/1     Running   8 (78m ago)    5d22h   10.244.0.198   minikube   <none>           <none>
+taskapi-544bbf8675-t8glt   1/1     Running   29 (78m ago)   21d     10.244.0.195   minikube   <none>           <none>
+NAME          REFERENCE            TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+taskapi-hpa   Deployment/taskapi   cpu: 1%/50%   2         8         2          21d
+NAME          MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+taskapi-pdb   2               N/A               0                     21d

@@ -6,10 +6,11 @@ experimentation with documented evidence.
 
 ## Architecture
 
+<img width="200" height="150" alt="k8s-architecture-diagram" src="https://github.com/user-attachments/assets/1666b972-9bc5-4e4f-9149-685ee685a86e" />
 
 
 
-**Stack**: k3s, Helm, kube-prometheus-stack, Flask, Python
+**Stack**: minikube, Helm, kube-prometheus-stack, Flask, Python
 
 ## Quick Start
 
